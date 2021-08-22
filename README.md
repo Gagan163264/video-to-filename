@@ -20,4 +20,4 @@ The program displays metadata on the terminal while converting all the frames to
 When prompted to start, press enter.
 Terminal should display a copy of the frame being printed onto the txt files in /folder, if it doesnt support unicode it shows blocks
 
-Example https://youtu.be/Z3J40XcTNXU
+Output looks something like https://youtu.be/Z3J40XcTNXU (but much slower, video has been sped up 2200 times)

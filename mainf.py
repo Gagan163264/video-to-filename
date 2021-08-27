@@ -8,9 +8,6 @@ if(len(sys.argv)==1):
     sys.exit("No filename specified")
 
 filename = sys.argv[1]
-if(filename[-3:]!='mp4'):
-    exitstr = filename[-3:]+' not supported'
-    sys.exit(exitstr)
 
 def asciify_pixel(p):
     return gradient[int((((int(p[0]) + int(p[1]) + int(p[2])) / 3)*(gradient_len-1))/255)]
@@ -55,6 +52,9 @@ print(f'Scaled Dims: {scaled_width}x{scaled_height}')
 print(f'Gradient: \'{"".join(gradient)}\'')
 print(f'FPS: {fps}')
 print('Converting...')
+
+if not os.path.exists(fname):
+    os.makedirs(fname)
 
 start_time = time.time()
 while True:
